@@ -82,8 +82,8 @@ export const LightCursor = () => {
           height: isHovering ? 50 : 35,
           opacity: isVisible ? 0.4 : 0,
           boxShadow: isHovering 
-            ? "0 0 30px 10px hsla(270, 80%, 60%, 0.5)" 
-            : "0 0 25px 8px hsla(190, 100%, 60%, 0.4)",
+            ? "0 0 30px 10px hsla(270, 80%, 60%, 0.6)" 
+            : "0 0 25px 8px hsla(270, 70%, 55%, 0.5)",
         }}
         transition={{ duration: 0.2 }}
       />
@@ -103,10 +103,10 @@ export const LightCursor = () => {
           opacity: isVisible ? 1 : 0,
           background: isHovering 
             ? "hsla(270, 100%, 75%, 1)"
-            : "hsla(190, 100%, 70%, 1)",
+            : "hsla(270, 80%, 65%, 1)",
           boxShadow: isHovering 
             ? "0 0 15px 4px hsla(270, 80%, 60%, 0.9), 0 0 30px 8px hsla(270, 80%, 50%, 0.5)" 
-            : "0 0 12px 3px hsla(190, 100%, 60%, 0.8), 0 0 25px 6px hsla(190, 100%, 50%, 0.4)",
+            : "0 0 12px 3px hsla(270, 70%, 55%, 0.8), 0 0 25px 6px hsla(270, 60%, 45%, 0.4)",
         }}
         transition={{ duration: 0.1 }}
       />
