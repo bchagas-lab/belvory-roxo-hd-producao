@@ -33,7 +33,7 @@ const Planet = ({ position, size, color, rings = false }: {
         <mesh rotation={[Math.PI / 2.5, 0, 0]}>
           <ringGeometry args={[size * 1.4, size * 2, 64]} />
           <meshStandardMaterial 
-            color="#88ccff" 
+            color="#a855f7" 
             side={THREE.DoubleSide}
             transparent
             opacity={0.6}
@@ -95,16 +95,16 @@ const Astronaut = ({ position }: { position: [number, number, number] }) => {
             depthWrite={false}
           />
         </sprite>
-        {/* Main glow effect */}
-        <pointLight position={[0, 0, 1]} intensity={2} color="#00d4ff" distance={8} />
+        {/* Main glow effect - purple */}
+        <pointLight position={[0, 0, 1]} intensity={2} color="#a855f7" distance={8} />
         {/* Secondary purple glow */}
-        <pointLight position={[0, 0, -0.5]} intensity={1.5} color="#8855ff" distance={6} />
+        <pointLight position={[0, 0, -0.5]} intensity={1.5} color="#7c3aed" distance={6} />
         {/* Rim light */}
         <pointLight position={[0, 0.5, 0.5]} intensity={1} color="#ffffff" distance={4} />
-        {/* Outer glow sprite */}
+        {/* Outer glow sprite - purple */}
         <sprite scale={[4, 4, 1]}>
           <spriteMaterial 
-            color="#00d4ff"
+            color="#a855f7"
             transparent 
             opacity={0.15}
             depthWrite={false}
@@ -128,11 +128,11 @@ const Particles = ({ count = 200 }: { count?: number }) => {
       positions[i * 3 + 1] = (Math.random() - 0.5) * 30;
       positions[i * 3 + 2] = (Math.random() - 0.5) * 30;
       
-      // Cyan to purple gradient
+      // Purple gradient colors
       const t = Math.random();
-      colors[i * 3] = 0 + t * 0.5;     // R
-      colors[i * 3 + 1] = 0.8 - t * 0.4; // G
-      colors[i * 3 + 2] = 1;             // B
+      colors[i * 3] = 0.5 + t * 0.3;     // R
+      colors[i * 3 + 1] = 0.2 + t * 0.2; // G
+      colors[i * 3 + 2] = 0.8 + t * 0.2; // B
     }
     
     return { positions, colors };
@@ -198,7 +198,7 @@ const ShootingStar = () => {
   return (
     <mesh ref={ref}>
       <sphereGeometry args={[0.03, 8, 8]} />
-      <meshBasicMaterial color="#00d4ff" />
+      <meshBasicMaterial color="#a855f7" />
     </mesh>
   );
 };
@@ -210,8 +210,8 @@ const Scene = () => {
       {/* Lighting */}
       <ambientLight intensity={0.2} />
       <directionalLight position={[10, 10, 5]} intensity={1} color="#ffffff" />
-      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#8855ff" />
-      <pointLight position={[5, 5, 5]} intensity={0.3} color="#00d4ff" />
+      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#a855f7" />
+      <pointLight position={[5, 5, 5]} intensity={0.3} color="#c084fc" />
 
       {/* Stars background */}
       <Stars 
@@ -235,11 +235,11 @@ const Scene = () => {
       {/* Moon orbiting */}
       <Moon parentPosition={[6, -2, -8]} />
 
-      {/* Secondary smaller planet */}
+      {/* Secondary smaller planet - purple */}
       <Planet 
         position={[-8, 3, -12]} 
         size={1.5} 
-        color="#1a4a6a"
+        color="#7c3aed"
       />
 
       {/* Astronaut */}
