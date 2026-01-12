@@ -3,7 +3,7 @@ import { Canvas, useFrame, useThree, useLoader } from "@react-three/fiber";
 import { Float, Stars } from "@react-three/drei";
 import * as THREE from "three";
 import astronautImage from "@/assets/astronaut-futuristic.png";
-import spaceHorizonImage from "@/assets/space-horizon.png";
+import spaceHorizonImage from "@/assets/space-horizon-purple.png";
 
 // Scroll-reactive camera controller
 const ScrollCamera = ({ scrollY }: { scrollY: number }) => {
@@ -111,9 +111,10 @@ const SpaceHorizon = ({ scrollY = 0 }: { scrollY?: number }) => {
     <mesh ref={meshRef} position={[0, -8, -25]}>
       <planeGeometry args={[80, 45]} />
       <meshBasicMaterial 
-        map={texture} 
+        map={texture}
+        color="#c084fc"
         transparent
-        opacity={0.9}
+        opacity={0.92}
         depthWrite={false}
       />
     </mesh>
