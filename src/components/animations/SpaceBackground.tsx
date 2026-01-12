@@ -65,7 +65,7 @@ const Planet = ({
         <mesh rotation={[Math.PI / 2.5, 0, 0]}>
           <ringGeometry args={[size * 1.4, size * 2, 64]} />
           <meshStandardMaterial 
-            color="#88ccff" 
+            color="#a855f7"
             side={THREE.DoubleSide}
             transparent
             opacity={0.6}
@@ -193,7 +193,7 @@ const Astronaut = ({ position, scrollY = 0 }: { position: [number, number, numbe
           <primitive object={material} attach="material" />
         </mesh>
         {/* Glow effect behind astronaut */}
-        <pointLight position={[0, 0, 1]} intensity={0.5} color="#00d4ff" distance={5} />
+        <pointLight position={[0, 0, 1]} intensity={0.5} color="#a855f7" distance={5} />
       </group>
     </Float>
   );
@@ -213,9 +213,10 @@ const Particles = ({ count = 200, scrollY = 0 }: { count?: number; scrollY?: num
       positions[i * 3 + 2] = (Math.random() - 0.5) * 40;
       
       const t = Math.random();
-      colors[i * 3] = 0 + t * 0.5;
-      colors[i * 3 + 1] = 0.8 - t * 0.4;
-      colors[i * 3 + 2] = 1;
+      // Purple gradient colors
+      colors[i * 3] = 0.5 + t * 0.3;     // R (purple has more red)
+      colors[i * 3 + 1] = 0.2 + t * 0.2; // G (less green)
+      colors[i * 3 + 2] = 0.8 + t * 0.2; // B (high blue)
     }
     
     return { positions, colors };
@@ -288,12 +289,12 @@ const ShootingStar = ({ delay = 0 }: { delay?: number }) => {
     <>
       <mesh ref={ref}>
         <sphereGeometry args={[0.04, 8, 8]} />
-        <meshBasicMaterial color="#00d4ff" />
+        <meshBasicMaterial color="#a855f7" />
       </mesh>
       <mesh ref={trailRef} rotation={[0, 0, Math.PI / 4]}>
         <planeGeometry args={[2, 0.02]} />
         <meshBasicMaterial 
-          color="#00d4ff" 
+          color="#c084fc" 
           transparent 
           opacity={0.5}
           side={THREE.DoubleSide}
@@ -313,8 +314,8 @@ const Scene = ({ scrollY = 0 }: { scrollY: number }) => {
       {/* Lighting */}
       <ambientLight intensity={0.15} />
       <directionalLight position={[10, 10, 5]} intensity={0.8} color="#ffffff" />
-      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#8855ff" />
-      <pointLight position={[5, 5, 5]} intensity={0.3} color="#00d4ff" />
+      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#a855f7" />
+      <pointLight position={[5, 5, 5]} intensity={0.3} color="#c084fc" />
 
       {/* Stars background */}
       <Stars 
@@ -359,7 +360,7 @@ export const SpaceBackground = () => {
     <div className="fixed inset-0 z-0">
       <Canvas
         camera={{ position: [0, 0, 8], fov: 60 }}
-        style={{ background: "linear-gradient(to bottom, #000000, #050510, #0a0a1a)" }}
+        style={{ background: "linear-gradient(to bottom, #0f0515, #120820, #1a0a2e)" }}
         dpr={[1.5, 2]}
         gl={{ antialias: true, alpha: false, powerPreference: "high-performance" }}
       >
