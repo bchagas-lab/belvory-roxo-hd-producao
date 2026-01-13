@@ -214,10 +214,10 @@ const Particles = ({ count = 200, scrollY = 0 }: { count?: number; scrollY?: num
       positions[i * 3 + 2] = (Math.random() - 0.5) * 40;
       
       const t = Math.random();
-      // Purple gradient colors
-      colors[i * 3] = 0.5 + t * 0.3;     // R (purple has more red)
-      colors[i * 3 + 1] = 0.2 + t * 0.2; // G (less green)
-      colors[i * 3 + 2] = 0.8 + t * 0.2; // B (high blue)
+      // Magenta-purple gradient (avoid blue/cyan)
+      colors[i * 3] = 0.65 + t * 0.3;      // R
+      colors[i * 3 + 1] = 0.12 + t * 0.18; // G
+      colors[i * 3 + 2] = 0.62 + t * 0.28; // B
     }
     
     return { positions, colors };
@@ -361,7 +361,9 @@ export const SpaceBackground = () => {
     <div className="fixed inset-0 z-0">
       <Canvas
         camera={{ position: [0, 0, 8], fov: 60 }}
-        style={{ background: "linear-gradient(to bottom, #0f0515, #120820, #1a0a2e)" }}
+        style={{
+          background: "linear-gradient(to bottom, hsl(var(--background)), hsl(var(--card)), hsl(var(--muted)))",
+        }}
         dpr={[1.5, 2]}
         gl={{ antialias: true, alpha: false, powerPreference: "high-performance" }}
       >
