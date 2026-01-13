@@ -192,13 +192,9 @@ const Home = () => {
             <span className="text-primary text-sm font-semibold uppercase tracking-wider">
               Impacto Real
             </span>
-            <h2 className="mt-4 text-4xl font-bold sm:text-5xl font-display flex items-center justify-center flex-wrap gap-3">
+            <h2 className="mt-4 text-4xl font-bold sm:text-5xl font-display">
               Por Que Escolher a{" "}
-              <img 
-                src={heroLogo} 
-                alt="Belvory" 
-                className="inline-block h-10 sm:h-12 lg:h-14 w-auto"
-              />
+              <span className="gradient-text">Belvory</span>
             </h2>
             <p className="mt-6 text-xl text-muted-foreground max-w-2xl mx-auto">
               Soluções completas para transformar sua operação com resultados
