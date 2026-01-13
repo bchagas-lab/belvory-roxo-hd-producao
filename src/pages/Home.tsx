@@ -192,7 +192,7 @@ const Home = () => {
             <span className="text-primary text-sm font-semibold uppercase tracking-wider">
               Impacto Real
             </span>
-            <h2 className="mt-4 text-4xl font-bold sm:text-5xl font-display">
+            <h2 className="mt-4 text-4xl font-bold sm:text-5xl font-satoshi">
               Por Que Escolher a{" "}
               <span className="gradient-text">Belvory</span>
             </h2>

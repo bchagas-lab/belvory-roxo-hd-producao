@@ -122,6 +122,13 @@ export default {
           'system-ui',
           'sans-serif'
         ],
+        satoshi: [
+          'Satoshi',
+          'Inter',
+          'ui-sans-serif',
+          'system-ui',
+          'sans-serif'
+        ],
         futuristic: [
           'Orbitron',
           'Space Grotesk',
