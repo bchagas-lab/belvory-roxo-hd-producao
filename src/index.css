@@ -44,14 +44,14 @@
     --radius: 0.75rem;
 
     /* Purple gradient colors */
-    --gradient-cyan: 280 60% 70%;
-    --gradient-blue: 270 70% 60%;
-    --gradient-purple: 260 80% 55%;
-    --gradient-pink: 290 70% 65%;
+    --gradient-cyan: 292 75% 68%;
+    --gradient-blue: 282 75% 60%;
+    --gradient-purple: 272 85% 55%;
+    --gradient-pink: 300 80% 70%;
 
     /* Glow effects */
-    --glow-cyan: 280 60% 70%;
-    --glow-purple: 260 80% 55%;
+    --glow-cyan: 292 75% 68%;
+    --glow-purple: 272 85% 55%;
 
     /* Header (dark with purple tint) */
     --header-bg: 270 20% 4%;
@@ -91,9 +91,9 @@
     --shadow-2xl: 0 24px 64px 0px hsl(270 20% 0% / 0.8);
 
     /* Glow shadows - purple themed */
-    --shadow-glow-cyan: 0 0 30px hsl(280 60% 70% / 0.3);
-    --shadow-glow-purple: 0 0 30px hsl(260 80% 55% / 0.3);
-    --shadow-glow-mixed: 0 0 40px hsl(270 70% 60% / 0.2), 0 0 80px hsl(260 80% 55% / 0.15);
+    --shadow-glow-cyan: 0 0 30px hsl(292 75% 68% / 0.3);
+    --shadow-glow-purple: 0 0 30px hsl(272 85% 55% / 0.3);
+    --shadow-glow-mixed: 0 0 40px hsl(270 70% 60% / 0.22), 0 0 80px hsl(292 75% 68% / 0.14);
 
     --tracking-normal: 0em;
     --spacing: 0.25rem;

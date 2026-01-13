@@ -128,11 +128,11 @@ const Particles = ({ count = 200 }: { count?: number }) => {
       positions[i * 3 + 1] = (Math.random() - 0.5) * 30;
       positions[i * 3 + 2] = (Math.random() - 0.5) * 30;
       
-      // Purple gradient colors
+      // Magenta-purple gradient (avoid blue/cyan)
       const t = Math.random();
-      colors[i * 3] = 0.5 + t * 0.3;     // R
-      colors[i * 3 + 1] = 0.2 + t * 0.2; // G
-      colors[i * 3 + 2] = 0.8 + t * 0.2; // B
+      colors[i * 3] = 0.65 + t * 0.3;      // R
+      colors[i * 3 + 1] = 0.12 + t * 0.18; // G
+      colors[i * 3 + 2] = 0.62 + t * 0.28; // B
     }
     
     return { positions, colors };

@@ -137,8 +137,9 @@ export const GlowCard = ({ children, className = "" }: GlowCardProps) => {
     <motion.div
       className={`relative overflow-hidden rounded-xl bg-card border border-border ${className}`}
       whileHover={{
-        borderColor: "hsl(190 95% 55% / 0.3)",
-        boxShadow: "0 0 30px hsl(190 95% 55% / 0.15), 0 0 60px hsl(270 80% 60% / 0.1)",
+        borderColor: "hsl(var(--primary) / 0.35)",
+        boxShadow:
+          "0 0 30px hsl(var(--primary) / 0.18), 0 0 60px hsl(var(--gradient-pink) / 0.12)",
       }}
       transition={{ duration: 0.3 }}
     >
